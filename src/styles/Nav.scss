@@ -1,0 +1,129 @@
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+#NavSide,
+#NavTop {
+    background-color: #ffffff;
+    color: #1650a7;
+    border: 1px solid rgba(146, 146, 146, 0.5);
+    z-index: 10;
+}
+
+#NavTopOpenBtn,
+#NavSideCloseBtn {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0 1rem;
+}
+
+nav ul a li {
+    color: rgb(41, 40, 40) !important;
+}
+
+//! NavTop Styles
+#NavTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+//! NavSide Styles
+#NavSide {
+    z-index: 12;
+    font-size: 1.2rem;
+    color: rgb(41, 40, 40) !important;
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    left: -300px;
+    transition: 200ms ease-in-out;
+}
+
+#NavSide.active {
+    left: 0;
+}
+
+div.NavSide-div-close {
+    display: flex;
+    align-content: center;
+    height: 70px;
+    #NavSideCloseBtn {
+        align-self: center;
+        margin-left: 1rem;
+    }
+}
+
+#NavSideMenus {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+}
+
+.NavSide-div-menu {
+    height: 500px;
+    width: 300px;
+    &.left-wing {
+        position: absolute;
+        top: 10;
+        transform: translateX(-300px);
+        transition: all 500ms ease-in-out;
+    }
+    &.right-wing {
+        position: absolute;
+        left: 300px;
+        top: 10;
+        transition: all 500ms ease-in-out;
+    }
+    &.chosen-wing {
+        position: absolute;
+        top: 10;
+        transform: translateX(-300px);
+        transition: all 500ms ease-in-out;
+    }
+    &.chosen-main-wing {
+        transform: translateX(0px);
+        transition: all 500ms ease-in-out;
+    }
+    transition: all 500ms ease-in-out;
+    ul {
+        height: 85vh;
+        overflow-y: scroll !important;
+        li {
+            padding: 1rem 1rem 1rem 2rem;
+        }
+    }
+}
+
+ul.NavSide-ul {
+    overflow-y: scroll;
+    width: 300px;
+    a li {
+        padding: 0.5rem;
+    }
+    li:hover {
+        background-color: rgba(146, 146, 146, 0.2);
+    }
+    li.active {
+        transition: 100ms ease-in-out;
+        background-color: rgba(146, 146, 146, 0.2);
+    }
+}
+
+// Version
+nav .version {
+    font-size: 0.5rem;
+    color: rgba(185, 178, 178, 0.8);
+    align-self: center;
+    text-align: center;
+}
