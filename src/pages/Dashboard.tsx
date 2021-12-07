@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ErrorMessage } from "../components/Messages";
 import { useAuth } from "../context/AuthContext";
 
 const Dashboard = () => {
@@ -19,7 +20,7 @@ const Dashboard = () => {
     return (
         <div>
             <h1>Dashboard</h1>
-            {error && <div className="error-msg">{error}</div>}
+            {error && <ErrorMessage>{error}</ErrorMessage>}
             <strong>Current User Email: {currentUser.email}</strong>
             <div className="button-group">
                 <Link to="/update-profile"><button type="button" className="btn btn-updateProfile">Update Profile</button></Link>

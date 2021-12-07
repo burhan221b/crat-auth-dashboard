@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { ErrorMessage, SuccessMessage } from "../components/Messages";
 import { useAuth } from "../context/AuthContext";
 
 const ForgotPassword = () => {
@@ -27,8 +28,8 @@ const ForgotPassword = () => {
         <div id="ForgotPassword">
             <div className="form-container">
                 <h2>Password Reset</h2>
-                {error && <div className="error-msg">{error}</div>}
-                {message && <div className="resetPassword-msg">{message}</div>}
+                {error && <ErrorMessage>{error}</ErrorMessage>}
+                {message && <SuccessMessage>{message}</SuccessMessage>}
                 <form onSubmit={handleSubmit} className="forgotPassword-form">
                     <div className="form-group">
                         <label htmlFor="email">Email</label>

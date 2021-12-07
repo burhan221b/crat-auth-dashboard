@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router";
+import { ErrorMessage } from "../components/Messages";
 
 const SignUp = () => {
     const [error, setError] = useState('');
@@ -31,7 +32,7 @@ const SignUp = () => {
         <div id="SignUp">
             <div className="form-container">
                 <h2>Sign Up</h2>
-                {error && <div className="error-msg">{error}</div>}
+                {error && <ErrorMessage>{error}</ErrorMessage>}
                 <form onSubmit={(e) => handleSubmit(e)} className="signup-form">
                     <div className="form-group">
                         <label htmlFor="email">Email</label>

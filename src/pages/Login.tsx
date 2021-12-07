@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { ErrorMessage } from "../components/Messages";
 import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
@@ -30,7 +31,7 @@ const Login = () => {
         <div id="Login">
             <div className="form-container">
                 <h2>Login</h2>
-                {error && <div className="error-msg">{error}</div>}
+                {error && <ErrorMessage>{error}</ErrorMessage>}
                 <form onSubmit={handleSubmit} className="login-form">
                     <div className="form-group">
                         <label htmlFor="email">Email</label>

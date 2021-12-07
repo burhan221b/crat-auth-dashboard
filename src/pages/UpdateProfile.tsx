@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router";
+import { ErrorMessage } from "../components/Messages";
 
 const UpdateProfile = () => {
     const [error, setError] = useState('');
@@ -40,7 +41,7 @@ const UpdateProfile = () => {
         <div id="UpdateProfile">
             <div className="form-container">
                 <h2>Update Profile</h2>
-                {error && <div className="error-msg">{error}</div>}
+                {error && <ErrorMessage>{error}</ErrorMessage>}
                 <form onSubmit={handleSubmit} className="updateProfile-form">
                     <div className="form-group">
                         <label htmlFor="email">Email</label>

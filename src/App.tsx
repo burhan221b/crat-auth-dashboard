@@ -1,15 +1,17 @@
 import React from 'react';
-import SignUp from './components/SignUp';
+import SignUp from './pages/SignUp';
 import './styles/Reset.scss';
 import './styles/App.scss';
+import './styles/Msg.scss';
+import './styles/Btn.scss';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import Login from './components/Login';
-import ForgotPassword from './components/ForgotPassword';
-import NotFound404 from './components/NotFound404';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import ForgotPassword from './pages/ForgotPassword';
+import NotFound404 from './pages/NotFound404';
 import PrivateRoute from './hoc/PrivateRoute';
-import UpdateProfile from './components/UpdateProfile';
+import UpdateProfile from './pages/UpdateProfile';
 import PublicRoute from './hoc/PublicRoute';
 
 function App() {
