@@ -26,23 +26,16 @@ const NavSide = (props: any) => {
                         <li><Link onClick={removeSideNavActive} to="/about">About</Link></li>
                         <li><Link onClick={removeSideNavActive} to="/contact">Contact</Link></li>
                         <li><Link onClick={() => openSideNavTopic("NavSideNotes")} to="/notes">Notes</Link></li>
-                        <li><Link onClick={() => openSideNavTopic("NavSideDocs")} to="/docs">Docs</Link></li>
+                        <li><Link onClick={() => openSideNavTopic("NavSideSettings")} to="/settings">Settings</Link></li>
                         <li><button>Sign</button></li>
                     </ul>
                 </div>
 
 
-                <div className="NavSide-div-menu right-wing" id="NavSideNotes">
+                <div className="NavSide-div-menu right-wing" id="NavSideSettings">
                     <ul className="NavSide-ul" >
-                        <li><button onClick={() => closeSideNavTopic("NavSideNotes")}><h2>&#10094;</h2></button></li>
-                        <li><Link onClick={removeSideNavActive} to="/about">About</Link></li>
-                        <li><Link onClick={removeSideNavActive} to="/contact">Contact</Link></li>
-                        <li><Link onClick={removeSideNavActive} to="/docs">Docs</Link></li>
-                        <li><Link onClick={removeSideNavActive} to="/about">About</Link></li>
-                        <li><Link onClick={removeSideNavActive} to="/contact">Contact</Link></li>
-                        <li><Link onClick={removeSideNavActive} to="/docs">Docs</Link></li>
-                        <li><Link onClick={removeSideNavActive} to="/about">About</Link></li>
-                        <li><Link onClick={removeSideNavActive} to="/contact">Contact</Link></li>
+                        <li><button onClick={() => closeSideNavTopic("NavSideSettings")}><h2>&#10094;</h2></button></li>
+                        <li><Link onClick={removeSideNavActive} to="/settings/update-profile">Update Profile</Link></li>
                     </ul>
                 </div>
 

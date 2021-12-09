@@ -5,7 +5,7 @@ const PublicRoute = ({ children }: any) => {
     const { currentUser } = useAuth();
     return (currentUser && currentUser.email) ?
         <Navigate
-            to="/dashboard"
+            to="/"
             replace
         /> : children;
 

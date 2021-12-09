@@ -28,7 +28,7 @@ const UpdateProfile = () => {
         }
         await Promise.all(PROMISES).then(() => {
             alert("Success, will redirect back to dashboard");
-            navigate("/dashboard", { replace: true });
+            navigate("/", { replace: true });
         }).catch(e => {
             console.error(e)
             setError("Failed to create an account");
@@ -60,7 +60,7 @@ const UpdateProfile = () => {
                     </div>
                 </form>
             </div>
-            <div className="div-already"><Link to="/dashboard">Cancel</Link></div>
+            <div className="div-already"><Link to="/">Cancel</Link></div>
         </div>
     )
 }

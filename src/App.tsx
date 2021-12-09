@@ -15,33 +15,24 @@ import PrivateRoute from './hoc/PrivateRoute';
 import UpdateProfile from './pages/UpdateProfile';
 import PublicRoute from './hoc/PublicRoute';
 import { Nav } from './components/nav/Nav';
+import Bridge from './Bridge';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <div className="App">
-          <Nav />
+
           <Routes>
             {/* Root goes to dashboard  */}
-            {/* <Route path="/" element={
+            <Route path="/*" element={
               //https://ui.dev/react-router-protected-routes-authentication/
               <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-            } /> */}
-            <Route path="/dashboard" element={
-              //https://ui.dev/react-router-protected-routes-authentication/
-              <PrivateRoute>
-                <Dashboard />
+                <Bridge />
               </PrivateRoute>
             } />
-            <Route path="/update-profile" element={
-              //https://ui.dev/react-router-protected-routes-authentication/
-              <PrivateRoute>
-                <UpdateProfile />
-              </PrivateRoute>
-            } />
+
+
             <Route path="/signup" element={
               <PublicRoute>
                 <SignUp />

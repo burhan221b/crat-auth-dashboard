@@ -20,7 +20,7 @@ const SignUp = () => {
             setError(""); // Reset error if any
             setLoading(true); // Prevent user from spamming submit button
             await signup(emailRef.current?.value, passwordRef.current?.value);
-            navigate("/dashboard", { replace: true });
+            navigate("/", { replace: true });
         } catch (e) {
             setError("Failed to create an account");
         } finally {
