@@ -1,0 +1,52 @@
+#Settings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    h1 {
+        align-self: flex-start;
+    }
+
+    .settings-btn-back {
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+        align-self: flex-start;
+        margin: 1em 2rem;
+    }
+}
+
+// a {
+// width: 100%;
+.settings-content {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    margin-top: 2em;
+    .settings-topic-container {
+        // display: flex;
+        // justify-content: space-between;
+        padding: 1em 2em;
+        border: 3px solid #000;
+        border-radius: 8px;
+        width: 80%;
+
+        &:hover {
+            background-color: #a99f9f;
+            box-shadow: 0px 0px 5px 2px lightgrey;
+            padding: 1em 2.2em;
+        }
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+// }
