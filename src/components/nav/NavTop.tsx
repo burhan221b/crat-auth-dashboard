@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { openSideNav } from "../../events"
+import Profile from "../profile/Profile"
 
 const NavTop = () => {
     useEffect(() => {
@@ -13,7 +14,7 @@ const NavTop = () => {
                 <Link to="/"><h1 style={{ display: "inline" }}>LOGO</h1></Link>
             </div>
             <div className="NavTop-div">
-
+                <Profile />
             </div>
         </nav>
     )
