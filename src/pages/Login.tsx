@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { ErrorMessage } from "../components/Messages";
+import { ErrorMessage } from "../components/ui/Messages";
 import { useAuth } from "../context/AuthContext";
 
 const Login = () => {

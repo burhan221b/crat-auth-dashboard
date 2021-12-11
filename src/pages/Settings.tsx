@@ -16,7 +16,7 @@ const Settings = () => {
         <div id="Settings">
             <div className="settings-div-title">
                 {location.pathname !== "/settings" ? <>
-                    <h1 onClick={() => navigate(-1)} className="settings-back-arrow">&#10094;</h1>
+                    <h1 onClick={() => navigate("/settings", { replace: true })} className="settings-back-arrow">&#10094;</h1>
                     <h3>Settings</h3>
                     <h3>&#10094;</h3>
                     <h3>{page_name}</h3>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ErrorMessage } from "../components/Messages";
+import { ErrorMessage } from "../components/ui/Messages";
 import { useAuth } from "../context/AuthContext";
 
 const Dashboard = () => {

@@ -24,59 +24,41 @@ body {
 
 .App {
     background-color: var(--bg);
-    h1 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         margin: 0;
         color: var(--color-headings);
     }
     p {
         color: var(--color-text);
-        font-size: 1.1em;
-        line-height: 1.8em;
-        margin-top: 2em;
-    }
-}
-
-.container {
-    // background-color: var(--bg-container);
-    background-color: var(--bg-panel);
-    margin: 5em;
-    padding: 5em;
-    border-radius: 15px;
-
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
-    .last-updated-home {
-        justify-self: end;
-        color: var(--color-text);
+        // font-size: 1.1em;
+        // line-height: 1.8em;
+        // margin-top: 2em;
     }
 }
 
 #NavSide,
 #NavTop {
     background-color: var(--bg-panel);
-    li a {
-        color: var(--color-headings);
-    }
 
     a {
         color: var(--color-headings);
         text-decoration: none;
+        cursor: pointer;
     }
 
     a:hover {
         color: var(--color-headings-hover);
         text-decoration: none;
-        cursor: pointer;
+        // cursor: pointer;
     }
 
     button {
         color: var(--color-text);
-    }
-
-    .logo-switch {
-        display: flex;
     }
 }
 
@@ -86,7 +68,7 @@ input[type="checkbox"] {
     visibility: hidden;
 }
 
-label {
+#DarkLightSwitch label {
     cursor: pointer;
     text-indent: -9999px;
     width: 52px;
@@ -97,7 +79,7 @@ label {
     position: relative;
 }
 
-label:after {
+#DarkLightSwitch label:after {
     content: "";
     position: absolute;
     top: 3px;
@@ -109,16 +91,16 @@ label:after {
     transition: 0.3s;
 }
 
-input:checked + label {
+#DarkLightSwitch input:checked + label {
     background: var(--color-headings);
 }
 
-input:checked + label:after {
+#DarkLightSwitch input:checked + label:after {
     left: calc(100% - 5px);
     transform: translateX(-100%);
 }
 
-label:active:after {
+#DarkLightSwitch label:active:after {
     width: 45px;
 }
 

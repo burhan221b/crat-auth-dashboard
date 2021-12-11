@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ErrorMessage, SuccessMessage } from "../components/Messages";
+import { ErrorMessage, SuccessMessage } from "../components/ui/Messages";
 import { useAuth } from "../context/AuthContext";
 
 const ForgotPassword = () => {

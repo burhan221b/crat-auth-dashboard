@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { closeSideNav, removeOverlay, removeSideNavActive, openSideNavTopic, closeSideNavTopic } from "../../events";
-import Version from "../Version";
+import Version from "../ui/Version";
 
 const NavSide = (props: any) => {
     let location = useLocation();

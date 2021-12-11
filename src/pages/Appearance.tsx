@@ -1,8 +1,8 @@
-import DarkLightSwitch from "../components/DarkLightSwitch"
+import DarkLightSwitch from "../components/ui/DarkLightSwitch"
 
 const Appearance = () => {
     return (
-        <div>
+        <div id="Appearance">
             <DarkLightSwitch />
         </div>
     )

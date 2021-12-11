@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { darkLightMode, createDarkLightMode } from '../events';
+import { darkLightMode, createDarkLightMode } from '../../events';
 
 
 const DarkLightSwitch = () => {
@@ -29,7 +29,7 @@ const DarkLightSwitch = () => {
     }
 
     return (
-        <div className="toggle-container">
+        <div id="DarkLightSwitch" className="toggle-container">
             <input checked={currentMode} onChange={(e) => checkMode(e)} type="checkbox" name="theme" id="switch" /><label htmlFor="switch" >Toggle</label>
         </div>
     )

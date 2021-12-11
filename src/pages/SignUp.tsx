@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router";
-import { ErrorMessage } from "../components/Messages";
+import { ErrorMessage } from "../components/ui/Messages";
 
 const SignUp = () => {
     const [error, setError] = useState('');
