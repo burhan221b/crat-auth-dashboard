@@ -1,6 +1,7 @@
 import { Link, Route, Routes, useLocation, useNavigate } from "react-router-dom"
 import PrivateRoute from "../hoc/PrivateRoute"
 import PublicRoute from "../hoc/PublicRoute"
+import Appearance from "./Appearance"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 
@@ -71,6 +72,11 @@ const Settings = () => {
                     //https://ui.dev/react-router-protected-routes-authentication/
                     <PrivateRoute>
                         <UpdateProfile />
+                    </PrivateRoute>
+                } />
+                <Route path="appearance" element={
+                    <PrivateRoute>
+                        <Appearance />
                     </PrivateRoute>
                 } />
             </Routes>
