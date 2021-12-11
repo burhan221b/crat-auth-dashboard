@@ -6,20 +6,22 @@ import Settings from "./pages/Settings"
 
 const Bridge = () => {
     return (
-        <div>
+        <div id="Bridge">
             <Nav />
-            <Routes>
-                <Route path="/" element={
-                    <PrivateRoute>
-                        <Dashboard />
-                    </PrivateRoute>
-                } />
-                <Route path="/settings/*" element={
-                    <PrivateRoute>
-                        <Settings />
-                    </PrivateRoute>
-                } />
-            </Routes>
+            <div className="bridge-content">
+                <Routes>
+                    <Route path="/" element={
+                        <PrivateRoute>
+                            <Dashboard />
+                        </PrivateRoute>
+                    } />
+                    <Route path="/settings/*" element={
+                        <PrivateRoute>
+                            <Settings />
+                        </PrivateRoute>
+                    } />
+                </Routes>
+            </div>
         </div>
     )
 }

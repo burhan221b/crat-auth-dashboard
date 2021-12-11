@@ -7,6 +7,7 @@ import './styles/Btn.scss';
 import './styles/Nav.scss';
 import './styles/Profile.scss';
 import './styles/Settings.scss';
+import './styles/Bridge.scss';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';

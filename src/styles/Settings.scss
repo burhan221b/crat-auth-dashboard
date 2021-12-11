@@ -4,16 +4,24 @@
     width: 100%;
     align-items: center;
 
-    h1 {
+    .settings-div-title {
         align-self: flex-start;
-    }
-
-    .settings-btn-back {
-        border: none;
-        background-color: transparent;
-        font-size: 2rem;
-        align-self: flex-start;
-        margin: 1em 2rem;
+        display: flex;
+        flex-direction: row;
+        margin-left: 1em;
+        gap: 1em;
+        .settings-back-arrow {
+            border: none;
+            font-size: 2rem;
+            align-self: flex-start;
+            &:hover {
+                color: rgb(220, 212, 212);
+                cursor: pointer;
+            }
+        }
+        h3 {
+            align-self: center;
+        }
     }
 }
 
