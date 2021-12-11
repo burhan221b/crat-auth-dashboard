@@ -39,12 +39,19 @@ const closeSideNavTopic = (topic: string) => {
 
 }
 
-const darkLightMode = () => {
+const createDarkLightMode = (mode = "light") => {
     const html = document.getElementsByTagName("html")[0];   // Get the html element in the document
     const att = document.createAttribute(`data-theme`);       // Create a attribute
-    att.value = "light";                           // Set the value of the attribute
+    att.value = mode;                           // Set the value of the attribute
     html.setAttributeNode(att);
+}
 
+// const darkLightMode = (mode = "light") => {
+// const html = document.getElementsByTagName("html")[0];   // Get the html element in the document
+// const att = document.createAttribute(`data-theme`);       // Create a attribute
+// att.value = mode;                           // Set the value of the attribute
+// html.setAttributeNode(att);
+const darkLightMode = () => {
     const checkbox: any = document.querySelector('input[name=theme]');
 
     checkbox.addEventListener('change', () => {
@@ -63,6 +70,7 @@ const darkLightMode = () => {
             document.documentElement.classList.remove('transition')
         }, 1000)
     }
+    return document.documentElement.getAttribute('data-theme') === 'dark'
 }
 
-export { openSideNav, closeSideNav, removeOverlay, removeSideNavActive, openSideNavTopic, closeSideNavTopic, darkLightMode }
+export { openSideNav, closeSideNav, removeOverlay, removeSideNavActive, openSideNavTopic, closeSideNavTopic, darkLightMode, createDarkLightMode }
