@@ -39,13 +39,14 @@
         // display: flex;
         // justify-content: space-between;
         padding: 1em 2em;
-        border: 3px solid #000;
+        // border: 3px solid #000;
+        border: none;
         border-radius: 8px;
         width: 80%;
-
+        box-shadow: 0px 0px 5px 2px lightgrey;
         &:hover {
             background-color: #a99f9f;
-            box-shadow: 0px 0px 5px 2px lightgrey;
+            // box-shadow: 0px 0px 5px 2px lightgrey;
             padding: 1em 2.2em;
         }
 
