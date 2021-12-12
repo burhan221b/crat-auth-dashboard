@@ -8,7 +8,7 @@ import './styles/Nav.scss';
 import './styles/Profile.scss';
 import './styles/Settings.scss';
 import './styles/Bridge.scss';
-import './styles/DarkMode.scss';
+import './styles/Theme.scss';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
@@ -20,42 +20,45 @@ import UpdateProfile from './pages/UpdateProfile';
 import PublicRoute from './hoc/PublicRoute';
 import { Nav } from './components/nav/Nav';
 import Bridge from './Bridge';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <div className="App">
+        <ThemeProvider>
+          <div className="App">
 
-          <Routes>
-            {/* Root goes to dashboard  */}
-            <Route path="/*" element={
-              //https://ui.dev/react-router-protected-routes-authentication/
-              <PrivateRoute>
-                <Bridge />
-              </PrivateRoute>
-            } />
+            <Routes>
+              {/* Root goes to dashboard  */}
+              <Route path="/*" element={
+                //https://ui.dev/react-router-protected-routes-authentication/
+                <PrivateRoute>
+                  <Bridge />
+                </PrivateRoute>
+              } />
 
 
-            <Route path="/signup" element={
-              <PublicRoute>
-                <SignUp />
-              </PublicRoute>
-            } />
-            <Route path="/login" element={
-              <PublicRoute>
-                <Login />
-              </PublicRoute>
-            } />
-            <Route path="/forgot-password" element={
-              <PublicRoute>
-                <ForgotPassword />
-              </PublicRoute>
-            } />
-            <Route path="*" element={<NotFound404 />} />
-          </Routes>
-          <div className="overlay"></div>
-        </div>
+              <Route path="/signup" element={
+                <PublicRoute>
+                  <SignUp />
+                </PublicRoute>
+              } />
+              <Route path="/login" element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
+              } />
+              <Route path="/forgot-password" element={
+                <PublicRoute>
+                  <ForgotPassword />
+                </PublicRoute>
+              } />
+              <Route path="*" element={<NotFound404 />} />
+            </Routes>
+            <div className="overlay"></div>
+          </div>
+        </ThemeProvider>
       </AuthProvider>
     </BrowserRouter>
   );

@@ -1,9 +1,9 @@
-import DarkLightSwitch from "../components/ui/DarkLightSwitch"
+import ThemeToggle from "../components/ui/ThemeToggle"
 
 const Appearance = () => {
     return (
         <div id="Appearance">
-            <DarkLightSwitch />
+            <ThemeToggle />
         </div>
     )
 }
