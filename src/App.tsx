@@ -9,6 +9,7 @@ import './styles/Profile.scss';
 import './styles/Settings.scss';
 import './styles/TopicContainer.scss';
 import './styles/Bridge.scss';
+import './styles/Forms.scss';
 import './styles/Theme.scss';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

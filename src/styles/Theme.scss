@@ -6,6 +6,7 @@ html {
     --color-headings-hover: #3694ff;
     --color-text: #333333;
     --bg-container: #ebebeb;
+    --bg-border: #aeacac;
 }
 
 // If theme is switched to Dark
@@ -17,6 +18,7 @@ html[data-theme="dark"] {
     --color-text: #b5b5b5;
     // --bg-container: #2a2a2a;
     --bg-container: #1c1c1c;
+    --bg-border: #121212;
 }
 
 body {
@@ -68,13 +70,11 @@ body {
 
 .content-container {
     background-color: var(--bg-container);
-    border-radius: 15px;
-    padding: 1em;
-    margin: 1em 0.5em;
 }
 
 .form-container {
     background-color: var(--bg-container);
+    border: 3px solid var(--bg-border);
 }
 
 //! Toggle and Transition below

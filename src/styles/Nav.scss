@@ -122,6 +122,9 @@ ul.NavSide-ul {
 }
 
 .navside-back-arrow {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
     border: none;
     background-color: transparent;
 

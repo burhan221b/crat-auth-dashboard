@@ -19,7 +19,7 @@ const Login = () => {
             setError(""); // Reset error if any
             setLoading(true); // Prevent user from spamming submit button
             await login(emailRef.current?.value, passwordRef.current?.value);
-            navigate((state ? state.path : null) || "/dashboard", { replace: true });
+            navigate((state ? state.path : null) || "/", { replace: true });
         } catch (e) {
             console.error(e)
             setError("Failed to sign in");

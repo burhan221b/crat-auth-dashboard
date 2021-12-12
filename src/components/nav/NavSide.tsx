@@ -41,7 +41,10 @@ const NavSide = (props: any) => {
                         <li><Link onClick={removeSideNavActive} to="/contact">Contact</Link></li>
                         <li><Link onClick={() => openSideNavTopic("NavSideNotes")} to="/notes">Notes</Link></li>
                         <li><Link onClick={() => openSideNavTopic("NavSideSettings")} to="/settings">Settings</Link></li>
-                        <li><Link onClick={handleLogout} to=""><span style={{ color: "crimson" }}>Sign Out</span></Link></li>
+                        <li><Link onClick={() => {
+                            removeSideNavActive();
+                            handleLogout();
+                        }} to=""><span style={{ color: "crimson" }}>Sign Out</span></Link></li>
 
                     </ul>
                 </div>
@@ -49,7 +52,7 @@ const NavSide = (props: any) => {
 
                 <div className="NavSide-div-menu right-wing" id="NavSideSettings">
                     <ul className="NavSide-ul" >
-                        <li><button className="navside-back-arrow" onClick={() => closeSideNavTopic("NavSideSettings")}><h2>&#10094;</h2></button></li>
+                        <li><button className="navside-back-arrow" onClick={() => closeSideNavTopic("NavSideSettings")}><h2>&#10094;</h2><h2>Settings</h2></button></li>
                         <li><Link onClick={removeSideNavActive} to="/settings/profile">Profile</Link></li>
                         <li><Link onClick={removeSideNavActive} to="/settings/account">Account</Link></li>
                         <li><Link onClick={removeSideNavActive} to="/settings/update-profile">Update Profile</Link></li>

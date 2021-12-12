@@ -44,15 +44,15 @@ const UpdateProfile = () => {
                 {error && <ErrorMessage>{error}</ErrorMessage>}
                 <form onSubmit={handleSubmit} className="updateProfile-form">
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email"><p>Email</p></label>
                         <input type="email" name="email" id="email" required ref={emailRef} defaultValue={currentUser.email} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password"><p>Password</p></label>
                         <input type="password" name="password" id="password" ref={passwordRef} placeholder="Leave blank if you want to keep the same" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="passwordConfirm">Confirm Password</label>
+                        <label htmlFor="passwordConfirm"><p>Confirm Password</p></label>
                         <input type="password" name="passwordConfirm" id="passwordConfirm" ref={passwordConfirmRef} placeholder="Leave blank if you want to keep the same" />
                     </div>
                     <div className="form-group">
