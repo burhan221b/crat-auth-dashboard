@@ -9,3 +9,10 @@ export const TopicContainer = ({ link, title }: TopicContainerProps) => {
         </Link>
     </div>)
 }
+
+export const ContentContainer = (props: any) => {
+    const { children, customStyles, customClassName } = props;
+    return (<div style={customStyles ? customStyles : {}} className={`content-container ${customClassName}`}>
+        {children}
+    </div>)
+}
