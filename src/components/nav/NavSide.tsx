@@ -27,7 +27,6 @@ const NavSide = (props: any) => {
                         <li><Link onClick={removeSideNavActive} to="/contact">Contact</Link></li>
                         <li><Link onClick={() => openSideNavTopic("NavSideNotes")} to="/notes">Notes</Link></li>
                         <li><Link onClick={() => openSideNavTopic("NavSideSettings")} to="/settings">Settings</Link></li>
-                        <li><button>Sign</button></li>
                     </ul>
                 </div>
 

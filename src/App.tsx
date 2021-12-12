@@ -7,6 +7,7 @@ import './styles/Btn.scss';
 import './styles/Nav.scss';
 import './styles/Profile.scss';
 import './styles/Settings.scss';
+import './styles/TopicContainer.scss';
 import './styles/Bridge.scss';
 import './styles/Theme.scss';
 import { AuthProvider } from './context/AuthContext';

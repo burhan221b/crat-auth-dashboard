@@ -22,6 +22,11 @@ const Dashboard = () => {
             <h1>Dashboard</h1>
             {error && <ErrorMessage>{error}</ErrorMessage>}
             <strong>Current User Email: {currentUser.email}</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis nostrum voluptatem vel cum laudantium alias numquam quidem quae voluptatibus, ad cumque sequi officiis iste quas et corporis? Nisi, nesciunt!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis nostrum voluptatem vel cum laudantium alias numquam quidem quae voluptatibus, ad cumque sequi officiis iste quas et corporis? Nisi, nesciunt!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis nostrum voluptatem vel cum laudantium alias numquam quidem quae voluptatibus, ad cumque sequi officiis iste quas et corporis? Nisi, nesciunt!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis nostrum voluptatem vel cum laudantium alias numquam quidem quae voluptatibus, ad cumque sequi officiis iste quas et corporis? Nisi, nesciunt!</p>
+
             <div className="button-group">
                 <Link to="/update-profile"><button type="button" className="btn btn-updateProfile">Update Profile</button></Link>
             </div>

@@ -34,33 +34,33 @@ const Settings = () => {
             {location.pathname === "/settings" &&
                 <section className="settings-content">
 
-                    <div className="settings-topic-container">
+                    <div className="topic-container">
                         <Link to="profile">
-                            <h2 className="settings-topic-title">Profile</h2>
+                            <h2 className="topic-title">Profile</h2>
                             <h2>&#8594;</h2>
                         </Link>
                     </div>
 
 
-                    <div className="settings-topic-container">
+                    <div className="topic-container">
                         <Link to="account">
-                            <h2 className="settings-topic-title">Account</h2>
+                            <h2 className="topic-title">Account</h2>
                             <h2>&#8594;</h2>
                         </Link>
                     </div>
 
 
-                    <div className="settings-topic-container">
+                    <div className="topic-container">
                         <Link to="email-password">
-                            <h2 className="settings-topic-title">Email / Password</h2>
+                            <h2 className="topic-title">Email / Password</h2>
                             <h2>&#8594;</h2>
                         </Link>
                     </div>
 
 
-                    <div className="settings-topic-container">
+                    <div className="topic-container">
                         <Link to="appearance">
-                            <h2 className="settings-topic-title">Appearance</h2>
+                            <h2 className="topic-title">Appearance</h2>
                             <h2>&#8594;</h2>
                         </Link>
                     </div>
