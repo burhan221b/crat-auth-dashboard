@@ -30,16 +30,12 @@ const Profile = () => {
         <div id="Profile">
             <div className="profile-dropdown">
 
-                <button className="profile-dropbtn">BA
-                    {/* <div className="profile-container">
-                    <h3>BA</h3>
-                </div> */}
-                </button>
+                <button className="profile-dropbtn">BA</button>
                 <div className="profile-dropdown-content">
                     <Link to="">Link 1</Link>
                     <Link to="/settings/update-profile">Update Profile</Link>
                     <hr />
-                    <Link to=""><p onClick={handleLogout} className="profile-signout">Sign Out</p></Link>
+                    <Link to=""><span onClick={handleLogout} className="profile-signout" style={{ color: "crimson" }}>Sign Out</span></Link>
 
                 </div>
             </div>

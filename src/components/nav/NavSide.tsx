@@ -1,10 +1,23 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import { closeSideNav, removeOverlay, removeSideNavActive, openSideNavTopic, closeSideNavTopic } from "../../events";
 import Version from "../ui/Version";
 
 const NavSide = (props: any) => {
-    let location = useLocation();
+    const { currentUser, logout } = useAuth();
+    const navigate = useNavigate();
+
+    // let location = useLocation();
+    const handleLogout = async () => {
+        try {
+            await logout();
+            navigate("/login", { replace: true })
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     useEffect(() => {
         // console.log(location.pathname);
         closeSideNav()
@@ -27,14 +40,19 @@ const NavSide = (props: any) => {
                         <li><Link onClick={removeSideNavActive} to="/contact">Contact</Link></li>
                         <li><Link onClick={() => openSideNavTopic("NavSideNotes")} to="/notes">Notes</Link></li>
                         <li><Link onClick={() => openSideNavTopic("NavSideSettings")} to="/settings">Settings</Link></li>
+                        <li><Link onClick={handleLogout} to=""><span style={{ color: "crimson" }}>Sign Out</span></Link></li>
+
                     </ul>
                 </div>
 
 
                 <div className="NavSide-div-menu right-wing" id="NavSideSettings">
                     <ul className="NavSide-ul" >
-                        <li><button onClick={() => closeSideNavTopic("NavSideSettings")}><h2>&#10094;</h2></button></li>
+                        <li><button className="navside-back-arrow" onClick={() => closeSideNavTopic("NavSideSettings")}><h2>&#10094;</h2></button></li>
+                        <li><Link onClick={removeSideNavActive} to="/settings/profile">Profile</Link></li>
+                        <li><Link onClick={removeSideNavActive} to="/settings/account">Account</Link></li>
                         <li><Link onClick={removeSideNavActive} to="/settings/update-profile">Update Profile</Link></li>
+                        <li><Link onClick={removeSideNavActive} to="/settings/appearance">Appearance</Link></li>
                     </ul>
                 </div>
 

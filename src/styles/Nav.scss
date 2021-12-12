@@ -120,6 +120,15 @@ ul.NavSide-ul {
     }
 }
 
+.navside-back-arrow {
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 // Version
 nav .version {
     font-size: 0.5rem;
