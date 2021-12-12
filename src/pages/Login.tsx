@@ -34,11 +34,11 @@ const Login = () => {
                 {error && <ErrorMessage>{error}</ErrorMessage>}
                 <form onSubmit={handleSubmit} className="login-form">
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email"><p>Email</p></label>
                         <input type="email" name="email" id="email" required ref={emailRef} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password"><p>Password</p></label>
                         <input type="password" name="password" id="password" required ref={passwordRef} />
                     </div>
                     <div className="form-group">
@@ -49,7 +49,7 @@ const Login = () => {
                 </form>
 
             </div>
-            <div className="div-already">Need an account? <Link to="/signup">Sign Up</Link></div>
+            <div className="div-already"><p>Need an account? <Link to="/signup">Sign Up</Link></p></div>
         </div>
     )
 }

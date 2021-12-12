@@ -4,6 +4,7 @@ import PublicRoute from "../hoc/PublicRoute"
 import Appearance from "./Appearance"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
+import { TopicContainer } from "../components/ui"
 
 const Settings = () => {
     let location = useLocation();
@@ -33,38 +34,10 @@ const Settings = () => {
 
             {location.pathname === "/settings" &&
                 <section className="settings-content">
-
-                    <div className="topic-container">
-                        <Link to="profile">
-                            <h2 className="topic-title">Profile</h2>
-                            <h2>&#8594;</h2>
-                        </Link>
-                    </div>
-
-
-                    <div className="topic-container">
-                        <Link to="account">
-                            <h2 className="topic-title">Account</h2>
-                            <h2>&#8594;</h2>
-                        </Link>
-                    </div>
-
-
-                    <div className="topic-container">
-                        <Link to="email-password">
-                            <h2 className="topic-title">Email / Password</h2>
-                            <h2>&#8594;</h2>
-                        </Link>
-                    </div>
-
-
-                    <div className="topic-container">
-                        <Link to="appearance">
-                            <h2 className="topic-title">Appearance</h2>
-                            <h2>&#8594;</h2>
-                        </Link>
-                    </div>
-
+                    <TopicContainer link="profile" title="Profile" />
+                    <TopicContainer link="account" title="Account" />
+                    <TopicContainer link="email-password" title="Email / Password" />
+                    <TopicContainer link="appearance" title="Appearance" />
                 </section>
             }
             <Routes>

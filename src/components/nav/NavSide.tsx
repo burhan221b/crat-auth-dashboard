@@ -29,6 +29,7 @@ const NavSide = (props: any) => {
             {/* Close Side Nav */}
             <div className="NavSide-div NavSide-div-close">
                 <button id="NavSideCloseBtn">&#10094;</button>
+                <h1 id="NavSideLogo">LOGO</h1>
             </div>
 
             {/* Links */}

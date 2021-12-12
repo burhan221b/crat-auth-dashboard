@@ -2,7 +2,6 @@
 html {
     // Vanilla CSS Variables
     --bg: #fcfcfc;
-    --bg-panel: #ebebeb;
     --color-headings: #0077ff;
     --color-headings-hover: #3694ff;
     --color-text: #333333;
@@ -13,11 +12,11 @@ html {
 html[data-theme="dark"] {
     // --bg: #2a2a2a;
     --bg: #000;
-    --bg-panel: #1c1c1c;
     --color-headings: #3694ff;
     --color-headings-hover: #0077ff;
     --color-text: #b5b5b5;
-    --bg-container: #2a2a2a;
+    // --bg-container: #2a2a2a;
+    --bg-container: #1c1c1c;
 }
 
 body {
@@ -37,12 +36,6 @@ body {
     p {
         color: var(--color-text);
     }
-}
-
-#NavSide,
-#NavTop {
-    background-color: var(--bg-panel);
-
     a {
         color: var(--color-headings);
     }
@@ -50,18 +43,27 @@ body {
     a:hover {
         color: var(--color-headings-hover);
     }
+}
+
+#NavSide,
+#NavTop {
+    background-color: var(--bg-container);
 
     button {
         color: var(--color-text);
     }
 }
 
+.topic-container {
+    background-color: var(--bg-container);
+}
+
 .topic-container:hover {
-    background-color: var(--bg-panel);
+    background-color: var(--bg-container);
 }
 
 .profile-dropdown-content {
-    background-color: var(--bg-panel);
+    background-color: var(--bg-container);
 }
 
 .content-container {
@@ -69,6 +71,10 @@ body {
     border-radius: 15px;
     padding: 1em;
     margin: 1em 0.5em;
+}
+
+.form-container {
+    background-color: var(--bg-container);
 }
 
 //! Toggle and Transition below
